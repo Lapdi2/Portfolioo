@@ -1,0 +1,49 @@
+@font-face { font-family:"Eurostile Extended"; src:url("fonts/EurostileExtendedBlack.ttf") format("truetype"); font-weight:900; }
+@font-face { font-family:"Futura Book"; src:url("fonts/FuturaBook.otf") format("opentype"); }
+:root { --cream:#f1efe4; --red:#c70003; --blue:#0019bd; --sky:#5ea4cc; --page:min(1528px,calc(100% - 80px)); --display:"Eurostile Extended",sans-serif; --body:"Futura Book",sans-serif; }
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden;background:var(--cream);font-family:var(--body);color:#000} img{display:block;max-width:100%} a{color:inherit}.project-header{position:absolute;z-index:2;width:100%}.navbar{display:flex;justify-content:center;gap:clamp(35px,6vw,115px);padding-top:clamp(20px,2vw,38px)}.navbar a,.back a{color:var(--red);text-decoration:none;font-size:clamp(16px,1.65vw,32px)}.navbar a:hover,.back a:hover{text-decoration:underline;text-underline-offset:.2em}
+.cover{position:relative;height:min(56.25vw,1080px);min-height:620px;overflow:hidden}.cover img{position:absolute;right:clamp(1rem,6vw,9rem);top:clamp(3rem,8vw,9rem);width:min(66vw,1050px);height:calc(100% - 8rem);object-fit:contain;object-position:center}.cover-copy{position:absolute;left:max(7vw,40px);bottom:clamp(75px,8vw,150px)}.cover h1{max-width:min(780px,80vw);margin:0;color:var(--blue);font:900 clamp(50px,7vw,135px)/.86 var(--display);letter-spacing:-.08em}.cover p{margin:.8rem 0 0;color:var(--red);font:900 clamp(17px,1.7vw,32px)/1.1 var(--display);letter-spacing:-.05em}
+.intro{background:var(--sky);padding:clamp(50px,4vw,76px) max(40px,7.5vw) clamp(60px,5vw,100px)}.intro-inner{position:relative;width:min(1632px,100%);min-height:730px;margin:auto}.intro-copy{width:min(62%,1010px);color:var(--blue);font-size:clamp(17px,1.4vw,28px);line-height:1.32;letter-spacing:-.045em}.intro-copy p{margin:0}.intro-copy .brief{padding-top:clamp(70px,7vw,135px);color:var(--red)}.intro-copy .description{padding-top:clamp(55px,6vw,110px);color:var(--cream)}.intro-art{position:absolute;right:-3%;bottom:0;width:min(47%,800px);max-height:670px;object-fit:contain;object-position:right bottom}
+.section{width:var(--page);margin:auto;padding:clamp(46px,4vw,76px) 0;border-top:2px solid var(--blue)}.section:first-of-type{border-top:0}.section h2{margin:0 0 clamp(35px,3vw,58px);color:var(--red);font:900 clamp(22px,1.7vw,32px)/1.2 var(--display);letter-spacing:-.05em}.feature{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(25px,4vw,80px);align-items:center}.feature-copy{font-size:clamp(17px,1.4vw,28px);line-height:1.3;letter-spacing:-.045em}.feature-copy p{margin:0}.feature img{width:100%;max-height:690px;object-fit:contain}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(15px,2vw,38px);width:min(1300px,100%);margin:auto}.gallery img{width:100%;aspect-ratio:1.12;object-fit:cover;background:#e9e7df}.gallery .wide{grid-column:span 2;aspect-ratio:2.1}.gallery .contain{object-fit:contain}.back{padding:10px 20px 80px;text-align:center}
+@media(max-width:700px){:root{--page:calc(100% - 48px)}.navbar{gap:22px}.cover{height:100svh;min-height:540px;max-height:750px}.cover img{right:-8%;top:64px;width:110%;height:55%}.cover-copy{left:24px;bottom:58px}.intro{padding:48px 24px 60px}.intro-inner{min-height:0;display:flex;flex-direction:column;gap:34px}.intro-copy{width:100%;font-size:17px}.intro-copy .brief,.intro-copy .description{padding-top:0;margin-top:0}.intro-art{position:relative;inset:auto;order:-1;width:100%;height:360px}.section{padding:48px 0}.feature{grid-template-columns:1fr;gap:28px}.feature-copy{font-size:17px}.feature img{max-height:430px}.gallery{grid-template-columns:1fr}.gallery .wide{grid-column:auto;aspect-ratio:1.12}.back{padding-bottom:60px}}
+
+@media(min-width:701px){.intro-inner{min-height:720px}}
+@media(min-width:901px){.cover,.intro{height:1080px}.intro{padding-top:76px;padding-bottom:76px}.intro-copy,.intro-copy .brief,.intro-copy .description{color:var(--cream)}.intro-copy{width:min(54%,900px)}.intro-art{right:0}}
+
+/* Shared responsive project rules. */
+.intro-copy,.intro-copy .brief,.intro-copy .description{color:var(--cream)}
+@media (min-width:701px) and (max-width:900px){.cover,.intro{min-height:720px}.intro-inner{min-height:600px}.intro-copy{width:48%;font-size:clamp(16px,2vw,22px)}.intro-art{width:47%;right:0;top:50%;bottom:auto;transform:translateY(-50%);max-height:90%;object-fit:contain}.intro-copy .brief,.intro-copy .description{padding-top:clamp(35px,5vw,65px)}}
+@media (max-width:700px){.intro-copy,.intro-copy .brief,.intro-copy .description{color:var(--cream)}.intro-copy p+ p{margin-top:32px}.intro-art{object-fit:contain!important;object-position:center!important}.intro+.section{border-top:0}}
+@media(min-width:701px){.intro-inner{display:flex;align-items:center}.intro-copy{position:relative;z-index:1}.intro-copy .brief,.intro-copy .description{padding-top:clamp(38px,4vw,72px)}}
+
+/* =========================================================
+   RESPONSIVE CONSISTENCY OVERRIDES
+   ========================================================= */
+
+/* All standard project intro sections share the same desktop height.
+   Text remains cream at every responsive breakpoint. */
+@media (min-width: 901px) {
+    .intro {
+        height: 1080px;
+        min-height: 0;
+    }
+
+    .intro-inner {
+        height: 928px;
+        min-height: 0;
+    }
+
+    .intro-copy,
+    .intro-copy .brief,
+    .intro-copy .description {
+        color: var(--cream);
+    }
+}
+
+@media (max-width: 900px) {
+    .intro-copy,
+    .intro-copy .brief,
+    .intro-copy .description {
+        color: var(--cream);
+    }
+}

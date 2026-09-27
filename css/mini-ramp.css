@@ -1,0 +1,6 @@
+@import url("project-page.css"); .ramp .cover img{width:min(65vw,1030px)}
+@media(min-width:701px){.ramp .cover img{right:clamp(-1rem,2vw,3rem)}.ramp .intro-inner{min-height:720px}.ramp .intro-art{right:calc(-1 * max(40px,7.5vw));height:100%;max-height:none;width:50vw;object-fit:cover}.ramp .intro+.section{border-top:0}.ramp .gallery{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:901px){.ramp .intro{height:1080px}.ramp .intro-inner{height:928px}.ramp .intro-copy{width:46%;padding-right:2rem}.ramp .intro-art{width:48vw;object-fit:contain;object-position:right bottom}}
+@media(min-width:701px){.ramp .intro-copy{width:44%;padding-right:2rem}.ramp .intro-art{right:0;top:0;bottom:0;height:100%;width:50%;max-height:none;transform:none;object-fit:contain;object-position:right center}}
+@media(min-width:701px) and (max-width:900px){.ramp .cover img{right:0;left:0;margin:auto;top:auto;bottom:0;width:94%;height:67%;object-position:center bottom}}
+@media(max-width:700px){.ramp .cover img{right:0;left:0;margin:auto;top:auto;bottom:50px;width:96%;height:60%;object-position:center bottom}.ramp .intro-copy p+p{margin-top:34px}.ramp .intro-art{margin:0 auto;width:90%;height:360px}.ramp .intro+.section{border-top:0}}

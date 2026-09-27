@@ -1,0 +1,354 @@
+@import url("project-page.css"); .cafe .cover img{width:min(62vw,930px)} .cafe .intro-art{width:min(53%,900px)}
+@media(min-width:701px){.cafe .cover img{right:clamp(-1rem,2vw,3rem)}.cafe .cover h1{font-size:clamp(46px,5.6vw,108px)}.cafe .intro-inner{min-height:720px}.cafe .section:first-of-type{border-top:0}.cafe .section:nth-of-type(3) .feature{grid-template-columns:2fr .8fr;position:relative}.cafe .section:nth-of-type(3) .feature-copy{display:none}.cafe .section:nth-of-type(3) .feature::after{content:"";height:620px;background:url("../images/cafe/top%200%20trasp.png") center top/100% auto no-repeat,url("../images/cafe/top%201%20trasp.png") center/100% auto no-repeat,url("../images/cafe/top%20roof%20trasp.png") center bottom/100% auto no-repeat}.cafe .section:nth-of-type(4) .gallery{grid-template-columns:repeat(4,1fr);gap:16px}.cafe .section:nth-of-type(4) .gallery img{aspect-ratio:4/3}.cafe .section:nth-of-type(5) .feature img{display:none}.cafe .section:nth-of-type(5) .feature{grid-template-columns:.75fr 1.25fr}.cafe .section:nth-of-type(5) .feature::after{content:"";height:540px;background:url("../images/cafe/iphone%20ideas.png") left center/auto 100% no-repeat,url("../images/cafe/event.png") right center/auto 100% no-repeat}}
+@media(min-width:701px){.cafe .section:nth-of-type(4) .gallery::after{content:"";grid-column:1/-1;height:860px;background:url("../images/cafe/CAT%20CAFE.png") 0 0/24% 48% no-repeat,url("../images/cafe/CAT%20CAFE%20no%20shadow.png") 25% 0/24% 48% no-repeat,url("../images/cafe/apartment.jpg") 50% 0/24% 48% no-repeat,url("../images/cafe/Minifigures.jpg") 75% 0/24% 48% no-repeat,url("../images/cafe/lego%20ideas%20box.jpg") 0 100%/24% 48% no-repeat,url("../images/cafe/top%200%20trasp.png") 25% 100%/24% 48% no-repeat,url("../images/cafe/top%201%20trasp.png") 50% 100%/24% 48% no-repeat,url("../images/cafe/top%20roof%20trasp.png") 75% 100%/24% 48% no-repeat,url("../images/cafe/CAT%20CAFE%20x%20box.png") 100% 0/0 0 no-repeat}}
+@media(min-width:901px){.cafe .intro{height:1080px}.cafe .intro-inner{height:928px}.cafe .intro-copy{width:46%}.cafe .intro+.section{border-top:0}.cafe .section:nth-of-type(3) .feature{width:min(1320px,100%);margin:auto;grid-template-columns:2fr .8fr}.cafe .section:nth-of-type(3) .feature::after{background-size:100% auto,100% auto,100% auto;background-position:center top,center,center bottom}.cafe .section:nth-of-type(4) .gallery{grid-template-columns:repeat(2,1fr);gap:24px}.cafe .section:nth-of-type(4) .gallery::after{display:none}.cafe .section:nth-of-type(4) .gallery img{aspect-ratio:4/3;object-fit:cover}}
+@media(min-width:701px){.cafe .cover{height:min(56.25vw,1080px);max-height:1080px}.cafe .cover img{width:min(60vw,1000px);right:max(7vw,40px);top:auto;bottom:0;height:92%;object-fit:contain;object-position:center bottom}.cafe .intro{max-height:1080px}.cafe .intro-copy{width:43%}.cafe .intro-art{top:50%;transform:translateY(-50%);right:0}.cafe .section:nth-of-type(3) .feature::after{height:700px;background-position:center top,center 50%,center bottom}.cafe .section:nth-of-type(4) .gallery{grid-template-columns:repeat(2,1fr);gap:22px}.cafe .section:nth-of-type(4) .gallery::after{display:none}.cafe .section:nth-of-type(4) .gallery img{aspect-ratio:4/3;object-fit:cover}.cafe .section:nth-of-type(5) .feature::after{height:clamp(280px,45vw,540px);background-size:auto 100%,auto 100%}}
+@media(max-width:700px){.cafe .cover img{width:95%;height:60%;right:2.5%;top:80px;object-fit:contain;object-position:center bottom}.cafe .intro-copy p+p{margin-top:34px}.cafe .section:nth-of-type(3) .feature-copy{display:none}.cafe .section:nth-of-type(3) .feature{display:flex;flex-direction:column;align-items:center}.cafe .section:nth-of-type(3) .feature>img{width:100%;order:1}.cafe .section:nth-of-type(3) .feature::after{content:"";order:2;width:70%;height:650px;background:url("../images/cafe/top%200%20trasp.png") center top/100% auto no-repeat,url("../images/cafe/top%201%20trasp.png") center 50%/100% auto no-repeat,url("../images/cafe/top%20roof%20trasp.png") center bottom/100% auto no-repeat}.cafe .section:nth-of-type(5) .feature>img{display:none}.cafe .section:nth-of-type(5) .feature::after{content:"";width:100%;height:330px;background:url("../images/cafe/iphone%20ideas.png") left center/auto calc(100% - 10px) no-repeat,url("../images/cafe/event.png") right center/auto calc(100% - 10px) no-repeat}}
+@media(min-width:701px) and (max-width:900px){.cafe .cover img{top:0;bottom:0;height:100%;right:max(7vw,40px)}.cafe .intro+.section{border-top:0}.cafe .section:nth-of-type(3) .feature::after{height:530px;background-position:center top,center 50%,center bottom}.cafe .section:nth-of-type(3) .feature{grid-template-columns:1.8fr .85fr}}
+@media(max-width:700px){.cafe .cover img{width:100%;height:67%;top:auto;bottom:45px;right:0;left:0;margin:auto;object-position:center bottom}.cafe .intro-art{margin:0 auto}.cafe .intro-copy .brief{margin-top:52px}.cafe .section:nth-of-type(3) .feature::after{height:710px;background-position:center top,center 50%,center bottom}.cafe .section:nth-of-type(4) .gallery{grid-template-columns:repeat(2,1fr);gap:16px}.cafe .section:nth-of-type(4) .gallery img{aspect-ratio:4/3;object-fit:cover}}
+/* Ten extra renderings: the gallery totals sixteen 4:3 images. */
+.cafe .section:nth-of-type(4) .gallery::after{content:"";display:block;grid-column:1/-1;height:min(125vw,1920px);background:url("../images/cafe/apartment.jpg") left top/48% 18% no-repeat,url("../images/cafe/art1_2.jpg") right top/48% 18% no-repeat,url("../images/cafe/Minifigures.jpg") left 20.5%/48% 18% no-repeat,url("../images/cafe/CAT%20CAFE.png") right 20.5%/48% 18% no-repeat,url("../images/cafe/CAT%20CAFE%20no%20shadow.png") left 41%/48% 18% no-repeat,url("../images/cafe/CAT%20CAFE%20x%20box.png") right 41%/48% 18% no-repeat,url("../images/cafe/lego%20ideas%20box.jpg") left 61.5%/48% 18% no-repeat,url("../images/cafe/top%200%20trasp.png") right 61.5%/48% 18% no-repeat,url("../images/cafe/top%201%20trasp.png") left 82%/48% 18% no-repeat,url("../images/cafe/top%20roof%20trasp.png") right 82%/48% 18% no-repeat}
+
+/* =========================================================
+   RESPONSIVE CONSISTENCY + MOBILE FIXES
+   ========================================================= */
+
+@media (max-width: 700px) {
+    /* Keep the Cat Café cover artwork fully inside the viewport. */
+    .cafe .cover img {
+        top: 70px;
+        right: -2%;
+        width: 94%;
+        height: 48%;
+        max-width: none;
+        object-fit: contain;
+        object-position: right center;
+    }
+
+    .cafe .cover-copy {
+        left: 24px;
+        right: 24px;
+        bottom: 58px;
+    }
+
+    .cafe .cover h1 {
+        max-width: 100%;
+        font-size: clamp(42px, 11vw, 72px);
+        line-height: .86;
+    }
+
+    /* Do not add an artificial paragraph gap on phones. */
+    .cafe .intro-copy p,
+    .cafe .intro-copy .brief,
+    .cafe .intro-copy .description {
+        margin: 0;
+        padding-top: 0;
+    }
+
+    /* The desktop layout builds the three top-floor PNGs as a pseudo-element.
+       Recreate that content on mobile instead of dropping it. */
+    .cafe .section:nth-of-type(3) .feature::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 520px;
+        margin-top: 8px;
+        background:
+            url("../images/cafe/top%200%20trasp.png") center top / 100% auto no-repeat,
+            url("../images/cafe/top%201%20trasp.png") center center / 100% auto no-repeat,
+            url("../images/cafe/top%20roof%20trasp.png") center bottom / 100% auto no-repeat;
+    }
+}
+
+/* Cafe cleanup: use only the real HTML content, never legacy pseudo galleries. */
+.cafe .renderings-section .renderings-gallery::after,
+.cafe .section:nth-of-type(4) .renderings-gallery::after,
+.cafe .section:nth-of-type(5) .feature::after,
+.cafe .section:nth-of-type(3) .modularity-feature::after { content: none !important; display: none !important; }
+.cafe .renderings-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; width:min(1500px,100%); }
+.cafe .renderings-gallery img { width:100%; aspect-ratio:4 / 3; height:auto; object-fit:cover; }
+.cafe .communication-media { display:flex; flex:1 1 55%; align-items:center; justify-content:flex-end; gap:20px; }
+.cafe .communication-media img { width:calc(50% - 10px); max-height:440px; object-fit:contain; }
+
+@media (min-width:701px) {
+  .cafe .modularity-feature { display:grid; width:auto; flex:1 1 68%; margin:0; }
+  .cafe .modularity-feature img { width:min(950px,100%); max-height:720px; }
+  .cafe .top-floors { width:min(320px,27%); margin:0; gap:22px; }
+  .cafe .section:nth-of-type(3) { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:clamp(28px,4vw,72px); }
+  .cafe .section:nth-of-type(3) h2 { width:100%; }
+  .cafe .section:nth-of-type(5) .feature { display:flex; grid-template-columns:none; align-items:center; gap:clamp(28px,4vw,64px); }
+  .cafe .section:nth-of-type(5) .feature-copy { flex:0 1 42%; }
+}
+
+@media (min-width:701px) and (max-width:900px) {
+  .cafe .modularity-feature { flex-basis:62%; }
+  .cafe .modularity-feature img { width:100%; max-height:620px; }
+  .cafe .top-floors { flex-basis:29%; gap:13px; }
+  .cafe .communication-media { flex-basis:54%; gap:14px; }
+  .cafe .communication-media img { width:calc(50% - 7px); max-height:310px; }
+}
+
+@media (max-width:700px) {
+  .cafe .section:nth-of-type(3) .feature::after { content:none !important; display:none !important; }
+  .cafe .modularity-feature { margin-bottom:34px; }
+  .cafe .top-floors { display:flex; width:78%; margin:auto; gap:38px; }
+  .cafe .renderings-gallery { gap:16px; }
+  .cafe .section:nth-of-type(5) .feature::after { content:none !important; display:none !important; }
+  .cafe .communication-media { display:flex; width:100%; gap:14px; }
+  .cafe .communication-media img { width:calc(50% - 7px); max-height:270px; }
+}
+
+/* Final Cat Café responsive layout. */
+.modularity-feature{display:grid;grid-template-columns:1fr;justify-items:center}.modularity-feature img{width:min(900px,100%)}.top-floors{display:flex;flex-direction:column;justify-content:space-between;gap:28px}.top-floors img{display:block;width:100%;height:auto;object-fit:contain}.renderings-gallery{grid-template-columns:repeat(2,minmax(0,1fr));width:min(1500px,100%)}.renderings-gallery img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover}.communication-media{display:flex;align-items:center;justify-content:center;gap:24px}.communication-media img{min-width:0;width:calc(50% - 12px);height:auto;object-fit:contain}
+@media(min-width:701px){.cafe .modularity-feature{display:inline-grid;width:65%;vertical-align:middle}.cafe .top-floors{display:inline-flex;width:28%;margin-left:5%;vertical-align:middle;gap:22px}.cafe .cover img{top:auto;bottom:0}.cafe .intro+.section{border-top:0}}
+@media(min-width:701px) and (max-width:900px){.cafe .cover img{top:0;bottom:0;height:100%;}.cafe .top-floors{gap:14px}.cafe .top-floors img{width:100%}}
+@media(max-width:700px){.cafe .cover img{left:50%;right:auto;transform:translateX(-50%);width:100%;height:65%;top:auto;bottom:45px}.cafe .modularity-feature{margin-bottom:34px}.cafe .top-floors{gap:38px;width:78%;margin:auto}.cafe .communication-media{gap:14px}.cafe .communication-media img{width:calc(50% - 7px)}}
+
+@media (max-width: 380px) {
+    .cafe .cover img {
+        top: 62px;
+        right: 0;
+        width: 100%;
+        height: 45%;
+    }
+
+    .cafe .cover-copy {
+        left: 18px;
+        right: 18px;
+        bottom: 45px;
+    }
+
+    .cafe .cover h1 {
+        font-size: 10.5vw;
+    }
+
+    .cafe .section:nth-of-type(3) .feature::after {
+        height: 430px;
+    }
+}
+
+@media (max-width: 700px) {
+    /* Desktop communication visuals are also shown on phones. */
+    .cafe .section:nth-of-type(5) .feature {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cafe .section:nth-of-type(5) .feature::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 360px;
+        background:
+            url("../images/cafe/iphone%20ideas.png") left center / auto 100% no-repeat,
+            url("../images/cafe/event.png") right center / auto 100% no-repeat;
+    }
+}
+
+
+/* =========================================================
+   Requested fixes only: tablet + desktop layout
+   ========================================================= */
+@media (min-width: 701px) {
+  /* MODULARITY: exploded view on the left, three floor images on the right. */
+  .cafe .section:has(> .modularity-feature) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(28px, 4vw, 72px);
+  }
+
+  .cafe .section:has(> .modularity-feature) > h2 {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature {
+    flex: 1 1 68%;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: 720px;
+    object-fit: contain;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors {
+    display: flex;
+    flex: 0 1 27%;
+    flex-direction: column;
+    width: 27%;
+    min-width: 0;
+    margin: 0;
+    gap: 22px;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* COMMUNICATION: use the two real HTML images, side by side. */
+  .cafe .section:has(> .feature > .communication-media) > .feature {
+    display: flex;
+    align-items: center;
+    gap: clamp(28px, 4vw, 64px);
+  }
+
+  .cafe .section:has(> .feature > .communication-media) .feature-copy {
+    flex: 0 1 42%;
+    min-width: 0;
+  }
+
+  .cafe .section:has(> .feature > .communication-media) .communication-media {
+    display: flex;
+    flex: 1 1 55%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    min-width: 0;
+  }
+
+  .cafe .section:has(> .feature > .communication-media) .communication-media img {
+    display: block;
+    width: calc(50% - 10px);
+    max-height: 440px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .cafe .section:has(> .modularity-feature) > .modularity-feature {
+    flex-basis: 62%;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature img {
+    max-height: 620px;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors {
+    flex-basis: 29%;
+    width: 29%;
+    gap: 14px;
+  }
+
+  .cafe .section:has(> .feature > .communication-media) .communication-media {
+    flex-basis: 54%;
+    gap: 14px;
+  }
+
+  .cafe .section:has(> .feature > .communication-media) .communication-media img {
+    width: calc(50% - 7px);
+    max-height: 310px;
+  }
+}
+
+
+/* Restore previous tablet/desktop MODULARITY layout only.
+   COMMUNICATION overrides above are intentionally left unchanged. */
+@media (min-width: 701px) {
+  .cafe .section:has(> .modularity-feature) {
+    display: block;
+  }
+
+  .cafe .section:has(> .modularity-feature) > h2 {
+    width: auto;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature img {
+    width: min(900px, 100%);
+    max-height: none;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    margin: 0 auto;
+    gap: 22px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .cafe .section:has(> .modularity-feature) > .top-floors {
+    gap: 14px;
+  }
+}
+
+
+/* MODULARITY only: place the exploded view and top-floor images side by side
+   on tablet and desktop. All other sections and mobile rules are unchanged. */
+@media (min-width: 701px) {
+  .cafe .section:has(> .modularity-feature) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 3vw, 48px);
+  }
+
+  .cafe .section:has(> .modularity-feature) > h2 {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature {
+    flex: 1 1 65%;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .modularity-feature img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors {
+    display: flex;
+    flex: 0 1 28%;
+    flex-direction: column;
+    width: 28%;
+    min-width: 0;
+    margin: 0;
+    gap: 18px;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .cafe .section:has(> .modularity-feature) > .modularity-feature {
+    flex-basis: 62%;
+  }
+
+  .cafe .section:has(> .modularity-feature) > .top-floors {
+    flex-basis: 30%;
+    width: 30%;
+    gap: 12px;
+  }
+}

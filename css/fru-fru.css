@@ -1,0 +1,1667 @@
+/* =========================================================
+   LAPDI DESIGNS — FRU FRU PROJECT
+   ========================================================= */
+
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+
+@font-face {
+    font-family: "Eurostile Extended";
+    src: url("fonts/EurostileExtendedBlack.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Futura Book";
+    src: url("fonts/FuturaBook.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --cream: #f1efe4;
+    --red: #c70003;
+    --blue: #5ea4cc;
+    --dark-blue: #0019bd;
+    --text: #000;
+
+    --display-font: "Eurostile Extended", sans-serif;
+    --body-font: "Futura Book", sans-serif;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--cream);
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.project-header {
+    position: absolute;
+
+    z-index: 50;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(28px, 5vw, 80px);
+
+    width: max-content;
+
+    margin: 0 auto;
+
+    padding-top: 22px;
+}
+
+.navbar a {
+    color: var(--red);
+
+    font-size: clamp(14px, 1.4vw, 24px);
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: opacity 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.section-heading {
+    color: var(--red);
+
+    font-family: var(--display-font);
+
+    font-size: clamp(22px, 1.7vw, 32px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   COVER
+   ========================================================= */
+
+.project-cover {
+    position: relative;
+
+    width: 100%;
+
+    height: min(56.25vw, 1080px);
+
+    min-height: 600px;
+
+    overflow: hidden;
+}
+
+.cover-image {
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("../images/fru fru/UAO.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+.cover-content {
+    position: absolute;
+
+    left: clamp(40px, 6.9vw, 133px);
+    right: clamp(40px, 6.9vw, 133px);
+
+    bottom: clamp(55px, 7vw, 135px);
+}
+
+.cover-content h1 {
+    margin: 0;
+
+    color: var(--dark-blue);
+
+    font-family: var(--display-font);
+
+    font-size: clamp(65px, 7.8vw, 150px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.05em;
+
+    white-space: nowrap;
+}
+
+.cover-content h2 {
+    margin: clamp(12px, 1vw, 20px) 0 0;
+
+    color: var(--red);
+
+    font-family: var(--display-font);
+
+    font-size: clamp(18px, 1.7vw, 32px);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.05em;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   INTRODUCTION / PRODUCT DESCRIPTION
+   ========================================================= */
+
+.project-intro {
+    position: relative;
+
+    background: var(--blue);
+
+    min-height: 0;
+
+    padding:
+        clamp(45px, 4vw, 75px)
+        clamp(40px, 7.5vw, 144px)
+        clamp(55px, 4vw, 75px);
+}
+
+.project-intro-content {
+    position: relative;
+
+    width: min(1632px, 100%);
+
+    min-height: 810px;
+
+    margin: 0 auto;
+}
+
+
+/* ---------- DETAILS ---------- */
+
+.project-details {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: min(1010px, 62%);
+
+    color: var(--cream);
+
+    font-size: clamp(17px, 1.42vw, 27px);
+
+    line-height: 1.32;
+
+    letter-spacing: -0.05em;
+}
+
+.project-details p {
+    margin: 0;
+}
+
+
+/* ---------- RENDER ---------- */
+
+.intro-render {
+    position: absolute;
+
+    top: 50%;
+    right: 3%;
+
+    width: min(550px, 34%);
+
+    transform: translateY(-50%);
+}
+
+.intro-render img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ---------- BRIEF ---------- */
+
+.brief {
+    position: absolute;
+
+    top: 300px;
+    left: 0;
+
+    width: min(1010px, 62%);
+
+    color: var(--cream);
+
+    font-size: clamp(17px, 1.42vw, 27px);
+
+    line-height: 1.32;
+
+    letter-spacing: -0.05em;
+}
+
+.brief p {
+    margin: 0;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.project-description {
+    position: absolute;
+
+    top: 555px;
+    left: 0;
+
+    width: min(1080px, 66%);
+
+    color: var(--cream);
+
+    font-size: clamp(17px, 1.42vw, 27px);
+
+    line-height: 1.32;
+
+    letter-spacing: -0.05em;
+}
+
+.project-description p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+.components-section {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        clamp(45px, 4vw, 75px)
+        clamp(40px, 7.5vw, 144px)
+        0;
+
+    background: var(--cream);
+}
+
+.components-content {
+    position: relative;
+
+    width: min(1632px, 100%);
+
+    min-height: 790px;
+
+    margin: 0 auto;
+}
+
+
+/* ---------- COMPONENT LIST ---------- */
+
+.components-list {
+    position: absolute;
+
+    top: 59px;
+    left: 0;
+
+    width: min(367px, 25%);
+
+    color: var(--dark-blue);
+
+    font-size: clamp(17px, 1.42vw, 27px);
+
+    line-height: 1.33;
+
+    letter-spacing: -0.05em;
+}
+
+.components-list p {
+    margin: 0;
+}
+
+
+/* ---------- EXPLODED VIEW ---------- */
+
+.exploded-view {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: min(1190px, 73%);
+}
+
+.exploded-view img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   MODULARITY
+   ========================================================= */
+
+.modularity-section {
+    position: relative;
+
+    background: var(--cream);
+
+    padding:
+        0
+        clamp(40px, 7.5vw, 144px)
+        clamp(55px, 4vw, 80px);
+}
+
+
+/* ---------------------------------------------------------
+   SECTION DIVIDER
+   --------------------------------------------------------- */
+
+.modularity-section::before {
+    content: "";
+
+    display: block;
+
+    width: min(1528px, 100%);
+
+    height: 1px;
+
+    margin:
+        0 auto
+        clamp(40px, 3vw, 60px);
+
+    background: var(--dark-blue);
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+   --------------------------------------------------------- */
+
+.modularity-content {
+    position: relative;
+
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    grid-template-rows: auto auto;
+
+    column-gap: 90px;
+
+    row-gap: clamp(40px, 2vw, 40px);
+
+    align-items: stretch;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN CONTAINER
+   --------------------------------------------------------- */
+
+.modularity-main {
+    display: contents;
+}
+
+
+/* ---------------------------------------------------------
+   MODULI
+   --------------------------------------------------------- */
+
+.modularity-image {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: stretch;
+}
+
+.modularity-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+
+/* ---------------------------------------------------------
+   FRULLS
+   --------------------------------------------------------- */
+
+.frulls-image {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 25%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: stretch;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.frulls-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+
+/* ---------------------------------------------------------
+   CAPTIONS
+   --------------------------------------------------------- */
+
+.modularity-captions {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    column-gap: clamp(10px, 1.5vw, 25px);
+
+    color: var(--text);
+
+    font-size:
+        clamp(15px, 1.15vw, 22px);
+
+    line-height: 1.25;
+
+    letter-spacing: -0.04em;
+
+    text-align: center;
+}
+
+.modularity-captions p {
+    margin: 0;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .modularity-section {
+        padding:
+            0
+            clamp(30px, 6vw, 70px)
+            clamp(50px, 5vw, 70px);
+    }
+
+
+    .modularity-content {
+        width: min(600px, 100%);
+
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        grid-template-rows:
+            auto
+            auto;
+
+        column-gap: 3px;
+
+        row-gap: clamp(20px, 3vw, 30px);
+    }
+
+
+    /* ---------- MODULI ---------- */
+
+    .modularity-image {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 100%;
+    }
+
+    .modularity-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* ---------- FRULLS ---------- */
+
+    .frulls-image {
+        grid-column: 2;
+        grid-row: 1;
+
+        width: 100%;
+        height: 100%;
+
+        min-width: 0;
+
+        display: flex;
+
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .frulls-image img {
+        width: 25%;
+        height: 100%;
+
+        max-width: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* ---------- CAPTIONS ---------- */
+
+    .modularity-captions {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        column-gap: 6px;
+
+        font-size:
+            clamp(13px, 1.8vw, 18px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .modularity-section {
+        padding:
+            50px
+            24px
+            60px;
+    }
+
+    .modularity-section::before {
+        margin-bottom: 40px;
+    }
+
+
+    .modularity-content {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        grid-template-rows:
+            auto
+            auto;
+
+        column-gap: 2px;
+
+        row-gap: 30px;
+
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        align-items: stretch;
+
+    }
+
+
+    /* ---------- MODULI ---------- */
+
+    .modularity-image {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: stretch;
+    }
+
+    .modularity-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* ---------- FRULLS ---------- */
+
+    .frulls-image {
+        grid-column: 2;
+        grid-row: 1;
+
+        width: 100%;
+        height: 100%;
+
+        min-width: 0;
+
+        display: flex;
+
+        align-items: stretch;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    .frulls-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    /* ---------- CAPTIONS ---------- */
+
+    .modularity-captions,
+    .modularity-text,
+    .modularity-descriptions,
+    .modularity-labels {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        width: 100%;
+
+        min-width: 0;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        column-gap: 8px;
+
+        font-size: 14px;
+
+        line-height: 1.25;
+
+        text-align: center;
+    }
+
+
+    .modularity-captions > *,
+    .modularity-text > *,
+    .modularity-descriptions > *,
+    .modularity-labels > * {
+        width: 100%;
+
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .modularity-section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .modularity-content {
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        column-gap: 2px;
+
+        row-gap: 18px;
+    }
+
+
+    .modularity-captions,
+    .modularity-text,
+    .modularity-descriptions,
+    .modularity-labels {
+        column-gap: 5px;
+
+        font-size: 12px;
+
+        line-height: 1.15;
+    }
+}
+
+
+/* =========================================================
+   COMMUNICATION
+   ========================================================= */
+
+.communication-section {
+    position: relative;
+
+    background: var(--cream);
+
+    padding:
+        0
+        clamp(40px, 7.5vw, 144px)
+        clamp(55px, 4vw, 80px);
+}
+
+.communication-section::before {
+    content: "";
+
+    display: block;
+
+    width: min(1528px, 100%);
+
+    height: 1px;
+
+    margin:
+        0 auto
+        clamp(40px, 3vw, 60px);
+
+    background: var(--dark-blue);
+}
+
+.communication-content {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: clamp(50px, 5vw, 100px);
+
+    width: min(1450px, 100%);
+
+    min-height: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* ---------- BRAND ---------- */
+
+.brand-content {
+    flex: 0 0 220px;
+
+    align-self: center;
+
+    width: 220px;
+}
+
+.brand-content img {
+    display: block;
+
+    width: 220px;
+
+    margin: 0 auto 25px;
+}
+
+.brand-content p {
+    margin: 0;
+
+    font-size: clamp(17px, 1.35vw, 26px);
+
+    line-height: 1.33;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------- PHONE ---------- */
+
+.phone-content {
+    flex: 0 0 285px;
+
+    width: 285px;
+
+    text-align: center;
+}
+
+.phone-content img {
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+.phone-content p {
+    width: 100%;
+
+    margin:
+        25px auto
+        0;
+
+    font-size: clamp(17px, 1.35vw, 26px);
+
+    line-height: 1.33;
+
+    text-align: center;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* ---------- PACKAGING ---------- */
+
+.packaging-content {
+    flex: 0 0 620px;
+
+    width: 620px;
+}
+
+.packaging-content img {
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* ---------- FIGMA LINK ---------- */
+
+.brand-content a {
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.brand-content a:hover,
+.brand-content a:focus-visible {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   BACK TO PROJECTS
+   ========================================================= */
+
+.back-to-projects {
+    padding:
+        15px
+        20px
+        70px;
+
+    text-align: center;
+}
+
+.back-to-projects a {
+    color: var(--red);
+
+    font-size: clamp(18px, 1.7vw, 32px);
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: opacity 0.2s ease;
+}
+
+.back-to-projects a:hover,
+.back-to-projects a:focus-visible {
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        gap: 30px;
+    }
+
+    .navbar a {
+        font-size: clamp(13px, 1.7vw, 18px);
+    }
+
+
+    /* ---------- COVER ---------- */
+
+    .project-cover {
+        min-height: 520px;
+    }
+
+    .cover-content {
+        left: 40px;
+        right: 40px;
+    }
+
+    .cover-content h1 {
+        font-size: clamp(60px, 10vw, 100px);
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .project-intro {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .project-intro-content {
+        min-height: 700px;
+    }
+
+    .project-details {
+        width: 56%;
+    }
+
+    .intro-render {
+        width: 36%;
+
+        right: 2%;
+    }
+
+    .brief {
+        top: 270px;
+
+        width: 58%;
+    }
+
+    .project-description {
+        top: 510px;
+
+        width: 63%;
+    }
+
+
+    /* ---------- COMPONENTS ---------- */
+
+    .components-section,
+    .modularity-section,
+    .communication-section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .components-content {
+        min-height: 650px;
+    }
+
+    .exploded-view {
+        width: 70%;
+    }
+
+
+    /* ---------- MODULARITY ---------- */
+
+    .modularity-content {
+        width: min(600px, 100%);
+
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        column-gap: 3px;
+    }
+
+
+    /* ---------- COMMUNICATION ---------- */
+
+    .communication-content {
+        min-height: 580px;
+
+        gap: 40px;
+    }
+
+    .brand-content {
+        flex-basis: 22%;
+
+        width: 22%;
+    }
+
+    .brand-content img {
+        width: 100%;
+    }
+
+    .phone-content {
+        flex-basis: 24%;
+
+        width: 24%;
+    }
+
+    .packaging-content {
+        flex-basis: 43%;
+
+        width: 43%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+        width: 100%;
+
+        padding:
+            22px
+            18px
+            0;
+
+        gap: 22px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+    }
+
+
+    /* ---------- COVER ---------- */
+
+    .project-cover {
+        height: 100svh;
+
+        min-height: 560px;
+        max-height: 760px;
+    }
+
+    .cover-content {
+        left: 24px;
+        right: 24px;
+
+        bottom: 55px;
+    }
+
+    .cover-content h1 {
+        font-size: min(14vw, 80px);
+
+        letter-spacing: -0.065em;
+    }
+
+    .cover-content h2 {
+        font-size: clamp(15px, 4vw, 22px);
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .project-intro {
+        padding:
+            45px
+            24px
+            60px;
+    }
+
+    .project-intro-content {
+        min-height: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .project-details,
+    .intro-render,
+    .brief,
+    .project-description {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        left: auto;
+
+        width: 100%;
+
+        transform: none;
+    }
+
+    .project-details,
+    .brief,
+    .project-description {
+        font-size: 17px;
+    }
+
+    .intro-render {
+        width: 72%;
+
+        align-self: center;
+    }
+
+
+    /* ---------- COMPONENTS ---------- */
+
+    .components-section {
+        padding:
+            50px
+            24px
+            0;
+    }
+
+    .components-content {
+        min-height: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .components-list,
+    .exploded-view {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        left: auto;
+
+        width: 100%;
+    }
+
+    .components-list {
+        font-size: 17px;
+    }
+
+
+    /* ---------- MODULARITY ---------- */
+
+    .modularity-section {
+        padding:
+            50px
+            24px
+            60px;
+    }
+
+    .modularity-section::before {
+        margin-bottom: 40px;
+    }
+
+
+    /*
+       Le immagini rimangono affiancate anche
+       sugli schermi piccoli.
+    */
+
+    .modularity-content {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        grid-template-rows:
+            auto
+            auto;
+
+        column-gap: 2px;
+
+        row-gap: 30px;
+
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        align-items: stretch;
+    }
+
+
+    .modularity-image {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: stretch;
+    }
+
+
+    .modularity-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+
+        object-fit: contain;
+    }
+
+
+    .frulls-image {
+        grid-column: 2;
+        grid-row: 1;
+
+        width: 100%;
+        height: 100%;
+
+        min-width: 0;
+
+        display: flex;
+
+        align-items: stretch;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+
+    .frulls-image img {
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
+    .modularity-captions,
+    .modularity-text,
+    .modularity-descriptions,
+    .modularity-labels {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        width: 100%;
+
+        min-width: 0;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        column-gap: 8px;
+
+        font-size: 14px;
+
+        line-height: 1.25;
+
+        text-align: center;
+    }
+
+
+    .modularity-captions > *,
+    .modularity-text > *,
+    .modularity-descriptions > *,
+    .modularity-labels > * {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* ---------- COMMUNICATION ---------- */
+
+    .communication-section {
+        padding:
+            0
+            24px
+            60px;
+    }
+
+    .communication-section::before {
+        margin-bottom: 40px;
+    }
+
+    .communication-content {
+        min-height: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 50px;
+    }
+
+    .brand-content,
+    .phone-content,
+    .packaging-content {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        left: auto;
+
+        width: 100%;
+    }
+
+
+    /* ---------- BRAND ---------- */
+
+    .brand-content {
+        flex: none;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .brand-content img {
+        width: 65%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .brand-content p {
+        width: 100%;
+
+        font-size: 17px;
+
+        text-align: left;
+    }
+
+
+    /* ---------- PHONE ---------- */
+
+    .phone-content {
+        flex: none;
+
+        width: 55%;
+    }
+
+    .phone-content img {
+        width: 100%;
+    }
+
+    .phone-content p {
+        width: 100%;
+
+        font-size: 17px;
+    }
+
+
+    /* ---------- PACKAGING ---------- */
+
+    .packaging-content {
+        flex: none;
+
+        width: 100%;
+    }
+
+    .packaging-content img {
+        width: 100%;
+    }
+
+
+    /* ---------- BACK ---------- */
+
+    .back-to-projects {
+        padding:
+            10px
+            20px
+            60px;
+    }
+
+    .back-to-projects a {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+
+    .project-cover {
+        min-height: 520px;
+    }
+
+    .cover-content {
+        left: 18px;
+        right: 18px;
+
+        bottom: 45px;
+    }
+
+    .cover-content h1 {
+        font-size: 13vw;
+    }
+
+
+    .project-intro,
+    .components-section,
+    .modularity-section,
+    .communication-section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .project-details,
+    .brief,
+    .project-description,
+    .components-list,
+    .brand-content p,
+    .phone-content p {
+        font-size: 16px;
+    }
+
+    .intro-render {
+        width: 88%;
+    }
+
+
+    /* ---------- MODULARITY ---------- */
+
+    .modularity-content {
+        width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        column-gap: 2px;
+
+        row-gap: 18px;
+    }
+
+
+    .modularity-captions,
+    .modularity-text,
+    .modularity-descriptions,
+    .modularity-labels {
+        width: 100%;
+
+        column-gap: 5px;
+
+        font-size: 12px;
+
+        line-height: 1.15;
+    }
+
+
+    /* ---------- BRAND ---------- */
+
+    .brand-content img {
+        width: 72%;
+    }
+
+
+    /* ---------- PHONE ---------- */
+
+    .phone-content {
+        width: 58%;
+    }
+}
+
+@media (min-width: 701px) {
+    .project-intro-content { min-height: 720px; }
+}
+@media (min-width:901px){.project-intro{height:1080px}.project-details,.brief,.project-description{color:var(--cream)}.project-intro-content{height:928px;min-height:0}}
+@media (min-width:701px){.project-cover{height:min(56.25vw,1080px);max-height:1080px}.project-intro{max-height:1080px}.project-details,.brief,.project-description{color:var(--cream)}.intro-render{width:min(650px,40%)}.project-details{top:0}.brief{top:300px}.project-description{top:555px}}
+@media (min-width:701px) and (max-width:900px){.project-intro-content{min-height:700px}.intro-render{width:42%}.project-details,.brief,.project-description{width:52%}.brief{top:250px}.project-description{top:470px}}
+@media(max-width:700px){.project-details,.brief,.project-description{color:var(--cream)}.project-intro-content{gap:32px}.brief,.project-description{margin-top:0}}
+@media(min-width:701px){.project-intro-content{display:flex;align-items:center}.project-details{top:50%;transform:translateY(-50%)}.brief{top:50%;transform:translateY(calc(-50% + 190px))}.project-description{top:50%;transform:translateY(calc(-50% + 380px))}.frulls-image{display:none}.modularity-content{display:block;width:min(1528px,100%)}.modularity-image{width:100%;height:auto;display:block}.modularity-image img{width:100%;height:auto}.modularity-captions{margin-top:28px}.modularity-section .section-heading{margin-bottom:42px}}
+@media(min-width:701px) and (max-width:900px){.project-details{transform:translateY(-50%)}.brief{transform:translateY(calc(-50% + 150px))}.project-description{transform:translateY(calc(-50% + 310px))}}
+@media(min-width:901px){.project-details{top:50%;transform:translateY(calc(-50% - 205px))}.brief{top:50%;transform:translateY(calc(-50% + 18px))}.project-description{top:50%;transform:translateY(calc(-50% + 230px))}}
+
+/* =========================================================
+   RESPONSIVE CONSISTENCY OVERRIDES
+   ========================================================= */
+
+@media (min-width: 901px) {
+    .project-intro {
+        height: 1080px;
+        min-height: 0;
+    }
+
+    .project-intro-content {
+        height: 928px;
+        min-height: 0;
+    }
+
+    .project-details,
+    .brief,
+    .project-description {
+        color: var(--cream);
+    }
+}
+
+@media (max-width: 900px) {
+    .project-details,
+    .brief,
+    .project-description {
+        color: var(--cream);
+    }
+}

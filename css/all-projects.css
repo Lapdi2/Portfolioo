@@ -1,0 +1,714 @@
+/* =========================================================
+
+   LAPDI DESIGNS — ALL PROJECTS
+
+   ========================================================= */
+
+
+/* =========================================================
+
+   FONTS
+
+   ========================================================= */
+
+@font-face {
+
+    font-family: "Eurostile Extended";
+
+    src:
+        url("fonts/EurostileExtendedBlack.ttf")
+        format("truetype");
+
+    font-weight: 900;
+
+    font-style: normal;
+
+}
+
+
+@font-face {
+
+    font-family: "Futura Book";
+
+    src:
+        url("fonts/FuturaBook.otf")
+        format("opentype");
+
+    font-weight: 400;
+
+    font-style: normal;
+
+}
+
+
+/* =========================================================
+
+   VARIABLES
+
+   ========================================================= */
+
+:root {
+
+    --cream: #f1efe4;
+
+    --red: #c70003;
+
+    --blue: #5ea4cc;
+
+    --dark-blue: #0019bd;
+
+    --card: #d9d9d9;
+
+    --text: #000;
+
+    --display-font:
+        "Eurostile Extended",
+        sans-serif;
+
+    --body-font:
+        "Futura Book",
+        sans-serif;
+
+}
+
+
+/* =========================================================
+
+   RESET
+
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    overflow-x: hidden;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+
+   NAVIGATION
+
+   ========================================================= */
+
+.projects-header {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+.navbar {
+
+    position: relative;
+
+    z-index: 10;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: clamp(28px, 5vw, 80px);
+
+    width: max-content;
+
+    margin: 0 auto;
+
+    padding-top: 22px;
+
+}
+
+
+.navbar a {
+
+    color: var(--red);
+
+    font-size: clamp(14px, 1.4vw, 24px);
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.2s ease;
+
+}
+
+
+.navbar a:hover,
+.navbar a:focus-visible {
+
+    opacity: 0.65;
+
+}
+
+
+/* =========================================================
+
+   ALL PROJECTS SECTION
+
+   ========================================================= */
+
+.all-projects {
+
+    width: 100%;
+
+    padding:
+        clamp(40px, 4vw, 70px)
+        clamp(28px, 8vw, 150px)
+        clamp(80px, 8vw, 140px);
+
+}
+
+
+/* =========================================================
+
+   PROJECTS TITLE
+
+   ========================================================= */
+
+.projects-title {
+
+    width: 100%;
+
+    margin:
+        0
+        0
+        clamp(60px, 6vw, 105px);
+
+    color: var(--dark-blue);
+
+    font-family: var(--display-font);
+
+    /* MODIFICATO: il titolo si riduce prima di arrivare
+       a superare la larghezza dello schermo */
+    font-size: min(8.5vw, 180px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.055em;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+
+   PROJECT GRID
+
+   ========================================================= */
+
+.all-projects-grid {
+
+    width: min(1500px, 100%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    column-gap:
+        clamp(25px, 3vw, 55px);
+
+    row-gap:
+        clamp(55px, 5vw, 85px);
+
+}
+
+
+/* =========================================================
+
+   PROJECT ITEM
+
+   ========================================================= */
+
+.project-item {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+
+}
+
+
+.project-item:hover,
+.project-item:focus-visible {
+
+    transform: translateY(-5px);
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================================================
+
+   PROJECT IMAGE
+
+   ========================================================= */
+
+.project-image {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    background-color: var(--card);
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    border-radius:
+        clamp(
+            16px,
+            1.7vw,
+            30px
+        );
+
+}
+
+
+/* =========================================================
+
+   PROJECT INFORMATION
+
+   ========================================================= */
+
+.project-info {
+
+    padding-top:
+        clamp(15px, 1.5vw, 24px);
+
+}
+
+
+.project-info h2 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size:
+        clamp(
+            15px,
+            1.35vw,
+            25px
+        );
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+}
+
+
+.project-info p {
+
+    margin:
+        4px
+        0
+        0;
+
+    color: var(--text);
+
+    font-family: var(--body-font);
+
+    font-size:
+        clamp(
+            14px,
+            1.25vw,
+            23px
+        );
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+}
+
+
+/* =========================================================
+
+   VIDEOS — CENTERED LAST ITEM
+
+   ========================================================= */
+
+.project-item-video {
+
+    grid-column: 2;
+
+}
+
+
+/* =========================================================
+
+   TABLET
+
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+
+        gap: 30px;
+
+    }
+
+
+    .navbar a {
+
+        font-size:
+            clamp(
+                13px,
+                1.7vw,
+                18px
+            );
+
+    }
+
+
+    /* ---------- SECTION ---------- */
+
+    .all-projects {
+
+        padding:
+            45px
+            40px
+            80px;
+
+    }
+
+
+    /* ---------- TITLE ---------- */
+
+    .projects-title {
+
+        margin-bottom: 65px;
+
+        /* MODIFICATO */
+        font-size: min(8.5vw, 120px);
+
+    }
+
+
+    /* ---------- GRID ---------- */
+
+    .all-projects-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 25px;
+
+        row-gap: 50px;
+
+    }
+
+
+    /* ---------- VIDEO ---------- */
+
+    .project-item-video {
+
+        grid-column: auto;
+
+    }
+
+}
+
+
+/* =========================================================
+
+   MOBILE
+
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+
+        width: 100%;
+
+        padding:
+            22px
+            18px
+            0;
+
+        gap: 22px;
+
+    }
+
+
+    .navbar a {
+
+        font-size: 15px;
+
+    }
+
+
+    /* ---------- SECTION ---------- */
+
+    .all-projects {
+
+        padding:
+            55px
+            24px
+            70px;
+
+    }
+
+
+    /* ---------- TITLE ---------- */
+
+    .projects-title {
+
+        width: 100%;
+
+        margin:
+            0
+            0
+            45px;
+
+        /* dimensione invariata */
+        font-size: min(10vw, 80px);
+
+        line-height: 0.9;
+
+        letter-spacing: -0.065em;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+    }
+
+
+    /* ---------- GRID ---------- */
+
+    .all-projects-grid {
+
+        width: 100%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 18px;
+
+        row-gap: 35px;
+
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .project-image {
+
+        border-radius: 18px;
+
+    }
+
+
+    /* ---------- INFO ---------- */
+
+    .project-info {
+
+        padding-top: 12px;
+
+    }
+
+
+    .project-info h2 {
+
+        font-size:
+            clamp(
+                11px,
+                3.2vw,
+                16px
+            );
+
+        line-height: 1.05;
+
+    }
+
+
+    .project-info p {
+
+        margin-top: 3px;
+
+        font-size:
+            clamp(
+                10px,
+                2.9vw,
+                15px
+            );
+
+        line-height: 1.1;
+
+    }
+
+}
+
+
+/* =========================================================
+
+   SMALL PHONES
+
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+
+        gap: 15px;
+
+    }
+
+
+    .navbar a {
+
+        font-size: 14px;
+
+    }
+
+
+    /* ---------- SECTION ---------- */
+
+    .all-projects {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    /* ---------- TITLE ---------- */
+
+    .projects-title {
+
+        margin-bottom: 40px;
+
+        /* MODIFICATO */
+        font-size: 9.2vw;
+
+        letter-spacing: -0.065em;
+
+    }
+
+
+    /* ---------- GRID ---------- */
+
+    .all-projects-grid {
+
+        column-gap: 14px;
+
+        row-gap: 30px;
+
+    }
+
+
+    /* ---------- IMAGE ---------- */
+
+    .project-image {
+
+        border-radius: 15px;
+
+    }
+
+
+    /* ---------- INFO ---------- */
+
+    .project-info {
+
+        padding-top: 9px;
+
+    }
+
+
+    .project-info h2 {
+
+        font-size: 3.1vw;
+
+    }
+
+
+    .project-info p {
+
+        font-size: 2.8vw;
+
+    }
+
+}
+

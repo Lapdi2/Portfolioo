@@ -1,0 +1,6 @@
+@import url("project-page.css"); .pone .cover img{width:min(62vw,980px)}
+@media(min-width:701px){.pone .cover img{content:url("../images/pone/copertina.jpg");inset:0;width:100%;height:100%;max-width:none;object-fit:cover}.pone .intro+.section{border-top:0}.pone .intro-inner{min-height:720px}}
+.pone .cover img{content:url("../images/pone/copertina.jpg")}
+@media(min-width:701px){.pone .intro-art{top:50%;right:0;bottom:auto;transform:translateY(-50%);height:86%;object-fit:contain}.pone .intro-copy{width:45%}}
+@media(max-width:700px){.pone .cover img{content:url("../images/pone/copertina.jpg")}.pone .intro-copy p+p{margin-top:34px}.pone .intro+.section{border-top:0}}
+@media(max-width:700px){.pone .cover img{height:100%;width:100%;top:0;right:0;object-fit:cover}}
